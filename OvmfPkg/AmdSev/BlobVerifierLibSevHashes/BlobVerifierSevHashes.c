@@ -164,6 +164,89 @@ VerifyBlob (
         ));
     } else {
       Status = EFI_ACCESS_DENIED;
+
+      DEBUG ((
+        DEBUG_INFO,
+        "%a: Passed hash: 0x"\
+        "%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X" \
+        "%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X" \
+        "\n",
+        __FUNCTION__,
+        Entry->Data[0],
+        Entry->Data[1],
+        Entry->Data[2],
+        Entry->Data[3],
+        Entry->Data[4],
+        Entry->Data[5],
+        Entry->Data[6],
+        Entry->Data[7],
+        Entry->Data[8],
+        Entry->Data[9],
+        Entry->Data[10],
+        Entry->Data[11],
+        Entry->Data[12],
+        Entry->Data[13],
+        Entry->Data[14],
+        Entry->Data[15],
+        Entry->Data[16],
+        Entry->Data[17],
+        Entry->Data[18],
+        Entry->Data[19],
+        Entry->Data[20],
+        Entry->Data[21],
+        Entry->Data[22],
+        Entry->Data[23],
+        Entry->Data[24],
+        Entry->Data[25],
+        Entry->Data[26],
+        Entry->Data[27],
+        Entry->Data[28],
+        Entry->Data[29],
+        Entry->Data[30],
+        Entry->Data[31]
+        ));
+
+      DEBUG ((
+        DEBUG_INFO,
+        "%a: Computed hash: 0x" \
+        "%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X" \
+        "%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X" \
+        "\n",
+        __FUNCTION__,
+        Hash[0],
+        Hash[1],
+        Hash[2],
+        Hash[3],
+        Hash[4],
+        Hash[5],
+        Hash[6],
+        Hash[7],
+        Hash[8],
+        Hash[9],
+        Hash[10],
+        Hash[11],
+        Hash[12],
+        Hash[13],
+        Hash[14],
+        Hash[15],
+        Hash[16],
+        Hash[17],
+        Hash[18],
+        Hash[19],
+        Hash[20],
+        Hash[21],
+        Hash[22],
+        Hash[23],
+        Hash[24],
+        Hash[25],
+        Hash[26],
+        Hash[27],
+        Hash[28],
+        Hash[29],
+        Hash[30],
+        Hash[31]
+        ));
+
       DEBUG ((
         DEBUG_ERROR,
         "%a: Hash comparison failed for \"%s\"\n",
